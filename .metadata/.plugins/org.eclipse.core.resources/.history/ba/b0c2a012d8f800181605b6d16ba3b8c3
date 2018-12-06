@@ -1,0 +1,5 @@
+package br.ifsp.farmacia.dao;
+
+public interface CidadeDao {
+
+}

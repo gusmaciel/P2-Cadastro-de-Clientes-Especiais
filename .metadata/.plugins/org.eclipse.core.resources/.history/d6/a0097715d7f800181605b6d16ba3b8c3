@@ -1,0 +1,10 @@
+package br.ifsp.farmacia.visao;
+
+public class ClienteUI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

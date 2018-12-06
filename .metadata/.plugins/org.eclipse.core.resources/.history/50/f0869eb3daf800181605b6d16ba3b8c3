@@ -1,0 +1,68 @@
+package br.ifsp.farmacia.visao;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class ClienteUI {
+
+	static JLabel lblNome;
+	static JLabel lblEndereco;
+	static JLabel lblTelefone;
+	static JLabel lblData;
+	static JLabel lblCidade;
+	
+	static JTextField txtNome;
+	static JTextField txtEndereco;
+	static JTextField txtTelefone;
+	static JTextField txtData;
+	
+	public static void main(String[] args) {
+
+		JFrame frame = new JFrame("Cadastro de Clientes Especiais");
+		frame.setSize(300,200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.setContentPane(panel);
+		
+		lblNome = new JLabel();
+		lblNome.setText("Nome: ");
+		panel.add(lblNome);
+		
+		txtNome = new JTextField(40);
+		panel.add(txtNome);
+		
+		lblEndereco = new JLabel();
+		lblEndereco.setText("Endereço: ");
+		panel.add(lblEndereco);
+		
+		txtEndereco = new JTextField(60);
+		panel.add(txtEndereco);
+		
+		lblTelefone = new JLabel();
+		lblTelefone.setText("Telefone: ");
+		panel.add(lblTelefone);
+		
+		txtTelefone = new JTextField(15);
+		panel.add(txtTelefone);
+		
+		lblData = new JLabel();
+		lblData.setText("Data de Nascimento: ");
+		panel.add(lblData);
+		
+		txtData = new JTextField(10);
+		panel.add(txtData);
+		
+		lblCidade = new JLabel();
+		lblCidade.setText("Cidade: ");
+		panel.add(lblCidade);
+		
+		
+		
+	}
+
+}

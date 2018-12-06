@@ -1,0 +1,40 @@
+package br.ifsp.farmacia.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import br.ifsp.farmacia.modelo.Cidade;
+
+public class JDBCCidadeDao implements CidadeDao {
+
+	@Override
+	public ArrayList<Cidade> obterCidades() {
+
+		try {
+			Connection conexao = ConnectionFactory.createConnection();
+			
+			String sql = "SELECT * FROM cidade;";
+			
+			PreparedStatement comando = conexao.prepareStatement(sql);
+			
+			ResultSet resultado = comando.executeQuery();
+			
+			ArrayList<Cidade> listaCidades = new ArrayList<Cidade>();
+			
+			while (resultado.next()) {
+				System.out.printf("%d : %s\n",
+						resultado.getInt("id"),
+						resultado.getString("nome")
+						);
+			}
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

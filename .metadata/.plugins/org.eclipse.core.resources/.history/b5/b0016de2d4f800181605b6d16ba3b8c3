@@ -1,0 +1,13 @@
+package br.ifsp.farmacia.dao;
+
+import br.ifsp.farmacia.modelo.Cliente;
+
+public class JDBCClienteDao implements ClienteDao {
+
+	@Override
+	public void gravaCliente(Cliente cliente) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

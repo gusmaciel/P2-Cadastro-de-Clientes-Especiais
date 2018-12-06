@@ -1,0 +1,55 @@
+package br.ifsp.farmacia.visao;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class ClienteUI {
+
+	
+	public static void main(String[] args) {
+		
+		JLabel lblNome;
+		JLabel lblEndereco;
+		JLabel lblTelefone;
+		JLabel lblData;
+		
+		JTextField txtNome;
+		JTextField txtEndereco;
+		JTextField txtTelefone;
+		JTextField txtData;
+
+		JFrame frame = new JFrame("Cadastro de Clientes Especiais");
+		frame.setSize(300,200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.setContentPane(panel);
+		
+		lblNome = new JLabel();
+		lblNome.setText("Nome: ");
+		panel.add(lblNome);
+		
+		txtNome = new JTextField(40);
+		panel.add(txtNome);
+		
+		lblEndereco = new JLabel();
+		lblEndereco.setText("Endereço: ");
+		panel.add(lblEndereco);
+		
+		txtEndereco = new JTextField(60);
+		panel.add(txtEndereco);
+		
+		lblTelefone = new JLabel();
+		lblTelefone.setText("Telefone: ");
+		panel.add(lblTelefone);
+		
+		txtData = new JTextField(10);
+		panel.add(txtData);
+		
+	}
+
+}

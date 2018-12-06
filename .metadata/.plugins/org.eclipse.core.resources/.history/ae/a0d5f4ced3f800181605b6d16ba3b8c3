@@ -1,0 +1,6 @@
+package br.ifsp.farmacia.dao;
+
+public interface ClienteDao {
+
+	public void gravaCliente (Cliente cliente);
+}
